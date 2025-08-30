@@ -98,12 +98,12 @@ export default function FeaturesPage() {
                 
                 <div className="flex-1">
                   <div className="aspect-video bg-gray-100 rounded-3xl border border-gray-200 flex items-center justify-center shadow-lg">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                        {feature.icon}
-                      </div>
-                      <p className="text-gray-500">Feature Demo</p>
-                    </div>
+                    <img 
+                      src="/Centralized Client Management Hub.png.png" 
+                      alt="Centralized Client Management Hub Demo"
+                      className="w-full h-full object-cover rounded-xl shadow-lg mx-auto"
+                      style={{ maxWidth: '100%' }}
+                    />
                   </div>
                 </div>
               </div>
