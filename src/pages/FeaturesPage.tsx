@@ -99,8 +99,8 @@ export default function FeaturesPage() {
                 <div className="flex-1">
                   <div className="aspect-video bg-gray-100 rounded-3xl border border-gray-200 flex items-center justify-center shadow-lg">
                     <img 
-                      src="/Centralized Client Management Hub.png.png" 
-                      alt="Centralized Client Management Hub Demo"
+                      src="/Automated Workflows & Follow-ups.png.png" 
+                      alt="Automated Workflows & Follow-ups Demo"
                       className="w-full h-full object-contain rounded-xl shadow-lg mx-auto"
                       style={{ maxWidth: '100%' }}
                     />
