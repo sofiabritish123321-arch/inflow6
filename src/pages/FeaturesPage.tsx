@@ -1,54 +1,31 @@
 import React from 'react';
-import { Users, Zap, Calendar, BarChart3, Shield, Globe, MessageSquare, Workflow } from 'lucide-react';
+import { Users, Zap, Calendar, BarChart3 } from 'lucide-react';
 
-export default function FeaturesPage() {
-  const coreFeatures = [
+interface FeaturesPageProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function FeaturesPage({ onNavigate }: FeaturesPageProps) {
+  const features = [
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Centralized Client Management Hub',
-      description: 'Keep all your client information, interactions, and history in one organized place.',
-      benefits: ['Complete client profiles', 'Interaction history tracking', 'Document management', 'Contact organization']
+      description: 'Keep all your client information, interactions, and history in one organized place.'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Automated Workflows & Follow-ups',
-      description: 'Set up smart automation to handle routine tasks and never miss important follow-ups.',
-      benefits: ['Email automation', 'Task scheduling', 'Follow-up reminders', 'Workflow templates']
+      description: 'Set up smart automation to handle routine tasks and never miss important follow-ups.'
     },
     {
-      icon: <Calendar className="w-8 h-8" />,
+      icon: <Calendar className="w-6 h-6" />,
       title: 'Built-in Booking & Scheduling',
-      description: 'Let clients book appointments directly with integrated calendar management.',
-      benefits: ['Online booking system', 'Calendar synchronization', 'Automated confirmations', 'Time zone support']
+      description: 'Let clients book appointments directly with integrated calendar management.'
     },
     {
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Data Insights for Smarter Decisions',
-      description: 'Get actionable insights from your business data to make informed strategic decisions.',
-      benefits: ['Performance analytics', 'Custom reporting', 'Trend analysis', 'ROI tracking']
-    }
-  ];
-
-  const additionalFeatures = [
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Communication Tools',
-      description: 'Integrated messaging and communication features to stay connected with clients.'
-    },
-    {
-      icon: <Workflow className="w-6 h-6" />,
-      title: 'Sales Pipelines',
-      description: 'Visual pipeline management to track deals and opportunities from lead to close.'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, backups, and compliance standards.'
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: 'API Integration',
-      description: 'Connect with your existing tools and services through our comprehensive API.'
+      description: 'Get actionable insights from your business data to make informed strategic decisions.'
     }
   ];
 
@@ -56,7 +33,7 @@ export default function FeaturesPage() {
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50 pt-24">
       <div className="container mx-auto px-6 py-20">
         {/* Hero Section */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-black mb-6 text-gray-900">
             Powerful Features
           </h1>
@@ -65,72 +42,28 @@ export default function FeaturesPage() {
           </p>
         </div>
 
-        {/* Core Features */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center text-gray-900">
-            Core Features
-          </h2>
-          
-          <div className="space-y-16">
-            {coreFeatures.map((feature, index) => (
-              <div 
-                key={index}
-                className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}
-              >
-                <div className="flex-1">
-                  <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="text-primary-600 mb-6">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                    <p className="text-gray-600 text-lg leading-relaxed mb-6">{feature.description}</p>
-                    
-                    <div className="space-y-3">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center">
-                          <span className="w-2 h-2 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-600">{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex-1">
-                  <div className="aspect-video bg-gray-100 rounded-3xl border border-gray-200 flex items-center justify-center shadow-lg">
-                    <img 
-                      src="/Automated Workflows & Follow-ups.png.png" 
-                      alt="Automated Workflows & Follow-ups Demo"
-                      className="w-full h-full object-contain rounded-xl shadow-lg mx-auto"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Additional Features */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-black mb-12 text-center text-gray-900">
-            Additional Features
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {additionalFeatures.map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-3xl p-6 border border-gray-200 hover:border-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl hover-lift"
-              >
-                <div className="text-primary-600 mb-4">
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-20">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-primary-300 transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-gradient-to-br hover:from-white hover:to-primary-50/30 group"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="text-primary-600 group-hover:text-primary-700 transition-colors duration-300 mt-1">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-primary-600 mb-3 group-hover:text-primary-700 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA Section */}
@@ -143,10 +76,16 @@ export default function FeaturesPage() {
               See how these powerful features can streamline your business operations and accelerate growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <button 
+                onClick={() => onNavigate?.('pricing')}
+                className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
                 Start Free Trial
               </button>
-              <button className="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border border-gray-300">
+              <button 
+                onClick={() => onNavigate?.('contact')}
+                className="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 border border-gray-300"
+              >
                 Schedule Demo
               </button>
             </div>
