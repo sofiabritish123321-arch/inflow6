@@ -101,7 +101,7 @@ export default function FeaturesPage() {
                     <img 
                       src="/Centralized Client Management Hub.png.png" 
                       alt="Centralized Client Management Hub Demo"
-                      className="w-full h-full object-cover rounded-xl shadow-lg mx-auto"
+                      className="w-full h-full object-contain rounded-xl shadow-lg mx-auto"
                       style={{ maxWidth: '100%' }}
                     />
                   </div>
