@@ -67,6 +67,126 @@ export default function FeaturesPage({ onNavigate }: FeaturesPageProps) {
         </div>
 
         {/* CTA Section */}
+        {/* Features Comparison Table */}
+        <section className="bg-white py-12 mb-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8">Features Comparison</h2>
+            <div className="overflow-x-auto">
+              <table className="min-w-full border border-gray-300 rounded-lg">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="text-left px-6 py-3 border-b">Features</th>
+                    <th className="text-left px-6 py-3 border-b">Replaces</th>
+                    <th className="text-left px-6 py-3 border-b">Other Tools</th>
+                    <th className="text-left px-6 py-3 border-b">Inflow</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y">
+                  <tr>
+                    <td className="px-6 py-3">CRM & Pipeline Management</td>
+                    <td className="px-6 py-3"><img src="/icons/hubspot.svg" className="h-6 inline-block" alt="HubSpot" /></td>
+                    <td className="px-6 py-3">$99/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Unlimited Sales Funnels</td>
+                    <td className="px-6 py-3"><img src="/icons/clickfunnels.svg" className="h-6 inline-block" alt="ClickFunnels" /></td>
+                    <td className="px-6 py-3">$297/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Website Builder</td>
+                    <td className="px-6 py-3">
+                      <img src="/icons/wix.svg" className="h-6 inline-block mr-2" alt="Wix" />
+                      <img src="/icons/wordpress.svg" className="h-6 inline-block" alt="WordPress" />
+                    </td>
+                    <td className="px-6 py-3">$29/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Surveys & Forms</td>
+                    <td className="px-6 py-3"><img src="/icons/surveymonkey.svg" className="h-6 inline-block" alt="SurveyMonkey" /></td>
+                    <td className="px-6 py-3">$49/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Email Marketing</td>
+                    <td className="px-6 py-3">
+                      <img src="/icons/mailchimp.svg" className="h-6 inline-block mr-2" alt="Mailchimp" />
+                      <img src="/icons/activecampaign.svg" className="h-6 inline-block" alt="ActiveCampaign" />
+                    </td>
+                    <td className="px-6 py-3">$99/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">2-Way SMS Marketing</td>
+                    <td className="px-6 py-3"><img src="/icons/twilio.svg" className="h-6 inline-block" alt="Twilio" /></td>
+                    <td className="px-6 py-3">$99/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Booking & Appointments</td>
+                    <td className="px-6 py-3"><img src="/icons/calendly.svg" className="h-6 inline-block" alt="Calendly" /></td>
+                    <td className="px-6 py-3">$29/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Workflow Automations</td>
+                    <td className="px-6 py-3"><img src="/icons/zapier.svg" className="h-6 inline-block" alt="Zapier" /></td>
+                    <td className="px-6 py-3">$169/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Courses/Products</td>
+                    <td className="px-6 py-3"><img src="/icons/teachable.svg" className="h-6 inline-block" alt="Teachable" /></td>
+                    <td className="px-6 py-3">$99/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Call Tracking</td>
+                    <td className="px-6 py-3"><img src="/icons/callrail.svg" className="h-6 inline-block" alt="CallRail" /></td>
+                    <td className="px-6 py-3">$49/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Reputation Management</td>
+                    <td className="px-6 py-3"><img src="/icons/birdeye.svg" className="h-6 inline-block" alt="BirdEye" /></td>
+                    <td className="px-6 py-3">$159/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Tracking & Analytics</td>
+                    <td className="px-6 py-3"><img src="/icons/googleanalytics.svg" className="h-6 inline-block" alt="Google Analytics" /></td>
+                    <td className="px-6 py-3">$299/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Communities</td>
+                    <td className="px-6 py-3"><img src="/icons/skool.svg" className="h-6 inline-block" alt="Skool" /></td>
+                    <td className="px-6 py-3">$89/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Document Signing</td>
+                    <td className="px-6 py-3"><img src="/icons/docusign.svg" className="h-6 inline-block" alt="DocuSign" /></td>
+                    <td className="px-6 py-3">$47/MONTHLY</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-3">Gray-Labeled Mobile App</td>
+                    <td className="px-6 py-3">Unique to Inflow</td>
+                    <td className="px-6 py-3">—</td>
+                    <td className="px-6 py-3 text-green-500 font-bold">✔</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="text-center mt-6">
+              <p className="text-xl font-bold">Overall Price: <span className="line-through text-red-500">$1,612 per month</span> → <span className="text-green-600">$75 per month</span></p>
+            </div>
+          </div>
+        </section>
+
         <div className="text-center">
           <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-black mb-6 text-gray-900">
